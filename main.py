@@ -1,3 +1,4 @@
+#alphabet just a litle twrik to make it a bit harder to crark
 alphabet = ['g', 'x', 'h', 'v', 'j', 'q', 'a', 'k', 'z', 'p', 'm', 'o', 'b', 'y', 'd', 'w', 'n', 's', 'f', 'u', 'l', 'i', 'c', 'e', 'r', 't','g', 'x', 'h', 'v', 'j', 'q', 'a', 'k', 'z', 'p', 'm', 'o', 'b', 'y', 'd', 'w', 'n', 's', 'f', 'u', 'l', 'i', 'c', 'e', 'r', 't']
 ciper_on=True
 while ciper_on:
@@ -14,12 +15,13 @@ while ciper_on:
         shift=input('Enter shift key:\n')
         try:
             shift=int(shift)
+            #Handing error for shiftkey numbers more than alphabet
             shift=shift%26
             break
         except ValueError:
             print(f'Shift key must be a whole number you entered {shift}')
     
-    #decrypt()
+    #decrypt and encry function ()
     def ciper (type,text,shift):
         nwrd=""
         shift=int(shift)
@@ -33,6 +35,7 @@ while ciper_on:
                     nw=alphabet.index(letter)-shift
                     nwrd=nwrd+alphabet[nw]
             else:
+                #To hannding special charaters and spaces
                 nwrd=nwrd+letter 
         return print(nwrd)
             
